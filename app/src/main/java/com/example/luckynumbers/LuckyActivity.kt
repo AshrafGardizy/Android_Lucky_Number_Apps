@@ -40,6 +40,7 @@ class LuckyActivity : AppCompatActivity() {
     fun shareData(name:String,number:Int)
     {
         var i = Intent(Intent.ACTION_SEND)
+        i.setType("text/plain")
         i.putExtra(Intent.EXTRA_SUBJECT,"$name is luky today")
         i.putExtra(Intent.EXTRA_TEXT,"His lucky number is: $number")
         startActivity(i)
